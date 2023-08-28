@@ -15,7 +15,7 @@ This is a Python wrapper for MP-HEAAN library for AMD64.
 
   * ### install requirements.txt (python libararies, including pybind11, numpy, etc.)
     ``` shell
-        pip3 install -r requirements.txt
+    pip3 install -r requirements.txt
     ```
 
   * ### install GMP and NTL
@@ -25,55 +25,55 @@ This is a Python wrapper for MP-HEAAN library for AMD64.
 
     * GMP-6.2.1 (https://gmplib.org/download/gmp/gmp-6.2.1.tar.xz)
     ``` shell
-        sudo apt-get install m4
+    sudo apt-get install m4
 
-        # tar -xf gmp-6.2.1.tar.xz
-        cd gmp-6.2.1
-        ./configure SHARED=on
-        make
-        make check #optional
-        sudo make install
+    # tar -xf gmp-6.2.1.tar.xz
+    cd gmp-6.2.1
+    ./configure SHARED=on
+    make
+    make check #optional
+    sudo make install
     ```
 
     * NTL-11.5.1 (https://libntl.org/ntl-11.5.1.tar.gz)
     ``` shell
-        # tar -zxvf ntl-11.5.1.tar.gz
-        cd ntl-11.5.1/src
-        ./configure SHARED=on
-        make
-        make check #optional
-        sudo make install
+    # tar -zxvf ntl-11.5.1.tar.gz
+    cd ntl-11.5.1/src
+    ./configure SHARED=on
+    make
+    make check #optional
+    sudo make install
     ```
 
  * ### compile MP-HEAAN-Python (global install)
     ``` shell
-      python3.10 setup.py build_ext -i
-      sudo python3.10 setup.py install 
+    python3.10 setup.py build_ext -i
+    sudo python3.10 setup.py install 
     ```
 
   * ### run the example
     * basic test
     ``` shell
-      python3.10 tests/test-basic.py
+    python3.10 tests/test-basic.py
     ```
 
   * ### FQA
     * Problem: fatal error: pybind11/pybind11.h: No such file or directory
       Solve: 
       ``` shell
-          python3 -c "import pybind11;print(pybind11.get_include())"
-          # output: /home/xxx/.local/lib/python3.10/site-packages/pybind11/include
-          vi setup.py
-          # modify Row[15] include_dirs=[..., 'pybind11/include'] => include_dirs=[..., '/home/xxx/.local/lib/python3.10/site-packages/pybind11/include']
+      python3 -c "import pybind11;print(pybind11.get_include())"
+        # output: /home/xxx/.local/lib/python3.10/site-packages/pybind11/include
+      vi setup.py
+        # modify Row[15] include_dirs=[..., 'pybind11/include'] => include_dirs=[..., '/home/xxx/.local/lib/python3.10/site-packages/pybind11/include']
       ```
     * Problem: ImportError: libntl.so.44: cannot open shared object file: No such file or directory
       Solve: 
       ``` shell
-          sudo find / -name libntl.so.44
-          # output: /usr/local/lib/libntl.so.44
-          LD_RUN_PATH=/usr/local/lib
-          echo $LD_RUN_PATH
-          # output: /usr/local/lib/
+      sudo find / -name libntl.so.44
+        # output: /usr/local/lib/libntl.so.44
+      LD_RUN_PATH=/usr/local/lib
+      echo $LD_RUN_PATH
+        # output: /usr/local/lib/
       ```
     * Problem: install ntl error: gmp version mismatch 
       Solve: cd gmp; sudo make uninstall; and install right version (gmp-6.2.1+NTL-11.5.1) 
@@ -82,19 +82,19 @@ This is a Python wrapper for MP-HEAAN library for AMD64.
 ## modify MP-HEAAN-Python and test the program
 * ### rebuild libHEAAN.a (if modify HEAAN)
   ``` shell
-      cd HEAAN/lib
-      make all
+  cd HEAAN/lib
+  make all
   ```
   
 * ### rebuild HEAAN-Python
   * method 1: 
     ``` shell
-        sudo rm -r ./build
-        sudo python3 setup.py install
+    sudo rm -r ./build
+    sudo python3 setup.py install
     ```
   * method 2: 
     ``` shell
-        python3 rebuild.py # change the passwd in rebuild.py
+    python3 rebuild.py # change the passwd in rebuild.py
     ```
 
 
