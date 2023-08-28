@@ -16,7 +16,7 @@ combinations of data without needing to access the original data. This scheme  i
 
   * ### install pybind11
     ``` shell
-        pip3 install -r requirements.txt
+        pip3 install pybind11
     ```
 
   * ### compile libLHH.a
