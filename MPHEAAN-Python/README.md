@@ -47,14 +47,14 @@ This is a Python wrapper for MP-HEAAN library for AMD64.
 
  * ### compile MP-HEAAN-Python (global install)
     ``` shell
-    python3.10 setup.py build_ext -i
-    sudo python3.10 setup.py install 
+    python3 setup.py build_ext -i
+    sudo python3 setup.py install 
     ```
 
   * ### run the example
     * basic test
     ``` shell
-    python3.10 tests/test-basic.py
+    python3 tests/test-basic.py
     ```
 
   * ### FQA
