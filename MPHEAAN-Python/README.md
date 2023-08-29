@@ -52,7 +52,6 @@ This is a Python wrapper for MP-HEAAN library for AMD64.
 
  * ### compile MP-HEAAN-Python (global install)
     ``` shell
-    python3 setup.py build_ext -i
     sudo python3 setup.py install 
     ```
 
