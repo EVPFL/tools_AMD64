@@ -44,6 +44,11 @@ This is a Python wrapper for MP-HEAAN library for AMD64.
     make check #optional
     sudo make install
     ```
+* ### compile libHEAAN.a
+    ``` shell
+    cd MPHEAAN-Python/MP-HEAAN/lib
+    make all 
+    ```
 
  * ### compile MP-HEAAN-Python (global install)
     ``` shell
