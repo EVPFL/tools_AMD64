@@ -75,8 +75,8 @@ This is a Python wrapper for MP-HEAAN library for AMD64.
       ``` shell
       sudo find / -name libntl.so.44
         # output: /usr/local/lib/libntl.so.44
-      LD_RUN_PATH=/usr/local/lib
-      echo $LD_RUN_PATH
+      export LD_LIBRARY_PATH=/usr/local/lib
+      echo $LD_LIBRARY_PATH
         # output: /usr/local/lib/
       ```
     * Problem: install ntl error: gmp version mismatch 
