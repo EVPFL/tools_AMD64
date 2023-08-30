@@ -7,31 +7,32 @@ This is a Python wrapper for MKLHS library for AMD64.
 
   * ### install pybind11
     ``` shell
-        pip3 install -r requirements.txt
+    pip3 install -r requirements.txt
     ```
 
   * ### install relic (build "./target/")
     ``` shell
-        cd MKLHS-Python/MKLHS/relic
-        unzip src.zip 
-        make
+    sudo apt install cmake
+    cd MKLHS-Python/MKLHS/relic
+    unzip src.zip 
+    make
     ```
 
   * ### compile libMKLHS.a
     ``` shell
-        cd MKLHS-Python/MKLHS/lib
-        make all 
+    cd MKLHS-Python/MKLHS/lib
+    make all 
     ```
 
   * ### compile MKLHS-Python (global install)
     ``` shell
-        cd MKLHS-Python/
-        sudo python3 setup.py install
+    cd MKLHS-Python/
+    sudo python3 setup.py install
     ```
 
   * ### run the example
     ``` shell
-        python3 test.py
+    python3 test.py
     ```
 
   * ### FQA
@@ -52,19 +53,19 @@ This is a Python wrapper for MKLHS library for AMD64.
 ## modify MKLHS-Python and test the program
 * ### rebuild librelic_s.a (if modify MKLHS/relic/src)
     ``` shell
-        cd MKLHS/relic
-        make
+    cd MKLHS/relic
+    make
     ```
 
 * ### rebuild libMKLHS.a (if modify MKLHS)
     ``` shell
-        cd MKLHS/lib
-        make all
+    cd MKLHS/lib
+    make all
     ```
 * ### rebuild LHH-Python
     ``` shell
-        sudo rm -r ./build 
-        sudo python3 setup.py install
+    sudo rm -r ./build 
+    sudo python3 setup.py install
     ```
 
 
