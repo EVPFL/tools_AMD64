@@ -25,8 +25,8 @@ This is a Python wrapper for MP-HEAAN library for AMD64.
 
     * GMP-6.2.1 (https://gmplib.org/download/gmp/gmp-6.2.1.tar.xz)
     ``` shell
+    # sudo apt-get install cmake
     sudo apt-get install m4
-
     # tar -xf gmp-6.2.1.tar.xz
     cd gmp-6.2.1
     ./configure SHARED=on
@@ -37,6 +37,7 @@ This is a Python wrapper for MP-HEAAN library for AMD64.
 
     * NTL-11.5.1 (https://libntl.org/ntl-11.5.1.tar.gz)
     ``` shell
+    # sudo apt-get install g++
     # tar -zxvf ntl-11.5.1.tar.gz
     cd ntl-11.5.1/src
     ./configure SHARED=on
