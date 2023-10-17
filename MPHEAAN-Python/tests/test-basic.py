@@ -1,6 +1,5 @@
 from HEAAN import ZZ, SecretKey, Key, Plaintext, Uint64_t
 
-import numpy as np
 from math import ceil
 import time
 
